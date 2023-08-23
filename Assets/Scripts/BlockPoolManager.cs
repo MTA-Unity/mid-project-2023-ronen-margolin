@@ -17,6 +17,7 @@ public class BlockPoolManager : MonoBehaviour
     private float rightBorder;
     private float topBorder;
     private float bottomBorder;
+    private bool firstDraw;
 
     List<Vector2> blockPositions;
     List<bool> alive = new List<bool>();
@@ -34,6 +35,7 @@ public class BlockPoolManager : MonoBehaviour
     {
         Assert.AreEqual(blocksInCol*blocksInRow, pool.amountToPool);
         blockPositions = calculateBlocks();
+        firstDraw = true;
     }
 
     private List<Vector2> calculateBlocks()
@@ -56,9 +58,13 @@ public class BlockPoolManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        for(int i=0;i<pool.amountToPool;i++)
+        if (firstDraw)
         {
-            drawBlock(i);
+            for(int i=0;i<pool.amountToPool;i++)
+            {
+                drawBlock(i);
+            }
+            firstDraw = false;
         }
     }
 
@@ -70,6 +76,7 @@ public class BlockPoolManager : MonoBehaviour
             block.SetActive(true);
             block.transform.position = blockPositions[i];
             block.transform.localScale = new Vector3(colWidth*0.7f, rowWidth*0.7f, 1);
+            block.GetComponent<Renderer>().material.color = Random.ColorHSV();
             alive[i] = true;
         }
     }

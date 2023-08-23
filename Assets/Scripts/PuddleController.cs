@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PuddleController : MonoBehaviour
@@ -25,9 +23,13 @@ public class PuddleController : MonoBehaviour
         {
             gyro = false;
         }
+
+        Debug.Log(gyro?"gyro on":"gyro off");
         // get left border in world units
-        leftBorder = cam.ScreenToWorldPoint(new Vector3(0,0,0)).x + puddle.transform.localScale.x/2;
-        rightBorder = cam.ScreenToWorldPoint(new Vector3(Screen.width,0,0)).x - puddle.transform.localScale.x/2;
+        leftBorder = cam.ScreenToWorldPoint(new Vector3(Screen.safeArea.xMin,0,0)).x 
+        + puddle.transform.localScale.x/2;
+        rightBorder = cam.ScreenToWorldPoint(new Vector3(Screen.safeArea.xMax,0,0)).x 
+        - puddle.transform.localScale.x/2;
     }
 
     // Update is called once per frame
@@ -43,15 +45,18 @@ public class PuddleController : MonoBehaviour
             horizontal = Input.gyro.gravity.x;
         }
 
-        if(Mathf.Abs(horizontal)<middleClamp)
+        if(gyro && Mathf.Abs(horizontal)<middleClamp)
         {
             horizontal = 0;
         }
 
-        Vector3 newPos = puddle.transform.position + 
-        new Vector3(horizontal, 0, 0).normalized * speed * Time.deltaTime;
-        puddle.transform.position = new Vector3(Mathf.Clamp(newPos.x,leftBorder,rightBorder), 
-        newPos.y, 
-        newPos.z);
+        if(horizontal!=0)
+        {
+            Vector3 newPos = puddle.transform.position + 
+            new Vector3(horizontal, 0, 0).normalized * speed * Time.deltaTime;
+            puddle.transform.position = new Vector3(Mathf.Clamp(newPos.x,leftBorder,rightBorder), 
+            newPos.y, 
+            newPos.z);
+        }
     }
 }

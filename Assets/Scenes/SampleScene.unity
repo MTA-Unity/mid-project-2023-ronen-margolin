@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pool: {fileID: 97760657}
   puddle: {fileID: 1589171769}
+  forceScale: 1
 --- !u!114 &97760657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,8 +423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puddle: {fileID: 1589171769}
-  speed: 2.5
-  middleClamp: 0.05
+  speed: 2
+  middleClamp: 0.2
   cam: {fileID: 519420031}
 --- !u!114 &1589171774
 MonoBehaviour:

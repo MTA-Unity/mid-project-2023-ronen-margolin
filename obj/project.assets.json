@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Unity.Burst/1.0.0": {
+      "Unity.Mathematics/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -10,10 +10,10 @@
           "UnityEngine.UI": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Unity.Burst.dll": {}
+          "bin/placeholder/Unity.Mathematics.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Unity.Burst.dll": {}
+          "bin/placeholder/Unity.Mathematics.dll": {}
         }
       },
       "UnityEditor.TestRunner/1.0.0": {
@@ -67,10 +67,10 @@
     }
   },
   "libraries": {
-    "Unity.Burst/1.0.0": {
+    "Unity.Mathematics/1.0.0": {
       "type": "project",
-      "path": "Unity.Burst.csproj",
-      "msbuildProject": "Unity.Burst.csproj"
+      "path": "Unity.Mathematics.csproj",
+      "msbuildProject": "Unity.Mathematics.csproj"
     },
     "UnityEditor.TestRunner/1.0.0": {
       "type": "project",
@@ -95,7 +95,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Unity.Burst >= 1.0.0",
+      "Unity.Mathematics >= 1.0.0",
       "UnityEditor.TestRunner >= 1.0.0",
       "UnityEditor.UI >= 1.0.0",
       "UnityEngine.TestRunner >= 1.0.0",
@@ -108,9 +108,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.Editor.csproj",
-      "projectName": "Unity.Burst.Editor",
-      "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.Editor.csproj",
+      "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj",
+      "projectName": "Unity.Mathematics.Editor",
+      "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj",
       "packagesPath": "/home/ronen/.nuget/packages/",
       "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
       "projectStyle": "PackageReference",
@@ -127,8 +127,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.csproj"
+            "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj": {
+              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj"
             },
             "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj": {
               "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj"

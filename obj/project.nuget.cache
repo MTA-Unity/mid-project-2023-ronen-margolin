@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T2pspNeYdLhwkE1hnvDWCPbBUVoa3fqotFJFWZpJhyvGHRqilIrZB+8C5mIQi3rE7jodRgWmgzyyfDMOPp+Lbg==",
+  "dgSpecHash": "hd+5qfyCllfqKW6ZWW1A6GaMAz2VPyRI+PFb2xB9Hu9hQoHF4wZj4svr4RrD0BBXh455h1n906cP6j1sBORrDQ==",
   "success": true,
-  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.Editor.csproj",
+  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
