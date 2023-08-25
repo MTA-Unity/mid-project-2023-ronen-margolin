@@ -59,8 +59,10 @@
     <Compile Include="Assets/Scripts/BallHandler.cs" />
     <Compile Include="Assets/Scripts/BlockBehavior.cs" />
     <Compile Include="Assets/Scripts/ObjectPool.cs" />
+    <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/PuddleController.cs" />
     <Compile Include="Assets/Scripts/BlockPoolManager.cs" />
+    <Compile Include="Assets/Scripts/borderBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

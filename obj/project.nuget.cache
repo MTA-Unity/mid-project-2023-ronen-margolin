@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hd+5qfyCllfqKW6ZWW1A6GaMAz2VPyRI+PFb2xB9Hu9hQoHF4wZj4svr4RrD0BBXh455h1n906cP6j1sBORrDQ==",
+  "dgSpecHash": "R/Md7Sqeth2qhYDWWH5w6MrWR0zT6CpipXFNw9FlpR656jtdqKpl3PPNeoAu9NonHHA/dZqIqznvMgwXKJt+kg==",
   "success": true,
-  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj",
+  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Assembly-CSharp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

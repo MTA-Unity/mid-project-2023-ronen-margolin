@@ -40,6 +40,7 @@ public class BallManager : MonoBehaviour
                 puddleBall.GetComponent<Rigidbody2D>().AddForce(
                     getRandomDir()*forceScale,
                     ForceMode2D.Impulse);
+                puddleBall.GetComponent<BallHandler>().setSpeed(puddleBall.GetComponent<Rigidbody2D>().velocity);
                 puddleBall = null;
             }
         }
