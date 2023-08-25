@@ -13,7 +13,7 @@ public class PuddleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SystemInfo.supportsGyroscope)
+        if(Application.isMobilePlatform && SystemInfo.supportsGyroscope)
         {
             Input.gyro.enabled =false;
             Input.gyro.enabled = true;

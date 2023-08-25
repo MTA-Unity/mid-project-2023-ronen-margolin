@@ -36,7 +36,7 @@ public class borderBuilder : MonoBehaviour
             left.transform.position = new Vector3(leftBorder, 0, 0);
             right.transform.position = new Vector3(rightBorder, 0, 0);
             top.transform.position = new Vector3(0, topBorder, 0);
-            top.transform.Rotate(new Vector3(90,0,0));
+            top.transform.Rotate(0,0,90);
             drawn = true;
         }
     }
