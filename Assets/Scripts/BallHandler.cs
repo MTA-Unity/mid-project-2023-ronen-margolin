@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class BallHandler : MonoBehaviour
@@ -7,19 +8,22 @@ public class BallHandler : MonoBehaviour
 
     private Vector2 speed;
 
+    private BallManager manager;
+
     // Start is called before the first frame update
     void Awake()
     {
+        manager = FindAnyObjectByType<BallManager>();
         speed = Vector2.zero;
-    }
-
-    private void Update() {
-        
     }
 
     public void setSpeed(Vector2 speed)
     {
         this.speed = speed;
+    }
+
+    private void Update() {
+        manager.checkBallAlive(this.gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
@@ -28,11 +32,11 @@ public class BallHandler : MonoBehaviour
             // get other object normal vector
             Vector2 normal = other.contacts[0].normal;
             // calculate refelction of speed
-            Vector2 reflection = Vector2.Reflect(speed, normal);
+            Vector2 reflection = Vector2.Reflect(speed, normal).normalized;
             // add random change in speed angle
             reflection = new Vector2(reflection.x 
-            + Random.Range(-0.1f, 0.1f), reflection.y 
-            + Random.Range(-0.1f, 0.1f)).normalized;
+            + Random.Range(-0.3f, 0.3f), reflection.y 
+            + Random.Range(-0.3f, 0.3f)).normalized;
             // adjust to same magnitude
             reflection = reflection * speed.magnitude;
             // set new speed

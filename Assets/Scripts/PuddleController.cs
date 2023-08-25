@@ -58,5 +58,9 @@ public class PuddleController : MonoBehaviour
             newPos.y, 
             newPos.z);
         }
+        else
+        {
+            puddle.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
     }
 }

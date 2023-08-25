@@ -9,10 +9,13 @@ public class BallManager : MonoBehaviour
     [SerializeField] private ObjectPool pool;
     [SerializeField] private GameObject puddle;
     [SerializeField] private float forceScale;
+    [SerializeField] private Camera cam;
     private GameObject puddleBall;
     private int alive;
+    private float bottomBorder;
 
     private void Awake() {
+        bottomBorder = cam.ScreenToWorldPoint(new Vector3(0,Screen.safeArea.yMin,0)).y;
     }
 
     // Start is called before the first frame update
@@ -43,6 +46,15 @@ public class BallManager : MonoBehaviour
                 puddleBall.GetComponent<BallHandler>().setSpeed(puddleBall.GetComponent<Rigidbody2D>().velocity);
                 puddleBall = null;
             }
+        }
+    }
+
+    public void checkBallAlive(GameObject ball)
+    {
+        if(ball.transform.position.y<bottomBorder)
+        {
+            alive--;
+            ball.SetActive(false);
         }
     }
 

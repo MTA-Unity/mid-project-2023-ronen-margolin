@@ -171,6 +171,7 @@ MonoBehaviour:
   pool: {fileID: 97760657}
   puddle: {fileID: 1589171769}
   forceScale: 2
+  cam: {fileID: 519420031}
 --- !u!114 &97760657
 MonoBehaviour:
   m_ObjectHideFlags: 0
