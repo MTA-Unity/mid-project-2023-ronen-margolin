@@ -53,8 +53,8 @@ public class BallManager : MonoBehaviour
     {
         if(ball.transform.position.y<bottomBorder)
         {
-            alive--;
             ball.SetActive(false);
+            alive--;
         }
     }
 
@@ -68,15 +68,15 @@ public class BallManager : MonoBehaviour
     void addBall()
     {
         puddleBall = pool.GetPooledObject();
-        alive++;
         sendBallToPuddle(puddleBall);
+        alive++;
     }
 
     void sendBallToPuddle(GameObject ball)
     {
         Vector3 ballPos = puddle.transform.position + 
         puddle.transform.up.normalized * (puddle.transform.localScale.y/2 + 
-        ball.transform.localScale.y/2);
+        7*ball.transform.localScale.y/13);
         ball.transform.position = ballPos;
         ball.SetActive(true);
     }

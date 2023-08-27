@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R/Md7Sqeth2qhYDWWH5w6MrWR0zT6CpipXFNw9FlpR656jtdqKpl3PPNeoAu9NonHHA/dZqIqznvMgwXKJt+kg==",
+  "dgSpecHash": "s9Lo4AZQeK4n0xWoFol4meMh0mBd+jSA0uY8Ea7QO/gURcrHvzKFsMHi3sF69WPDnZR3vXE2+6Yox+HDFj/M5w==",
   "success": true,
-  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Assembly-CSharp.csproj",
+  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Rider.Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
