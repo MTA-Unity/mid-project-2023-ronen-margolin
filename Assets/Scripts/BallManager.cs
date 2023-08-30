@@ -40,10 +40,7 @@ public class BallManager : MonoBehaviour
                 puddleBall.transform.position.z);
             if(Input.anyKey)
             {
-                puddleBall.GetComponent<Rigidbody2D>().AddForce(
-                    getRandomDir()*forceScale,
-                    ForceMode2D.Impulse);
-                puddleBall.GetComponent<BallHandler>().setSpeed(puddleBall.GetComponent<Rigidbody2D>().velocity);
+                puddleBall.GetComponent<BallHandler>().setSpeed(getRandomDir());
                 puddleBall = null;
             }
         }
@@ -79,5 +76,10 @@ public class BallManager : MonoBehaviour
         7*ball.transform.localScale.y/13);
         ball.transform.position = ballPos;
         ball.SetActive(true);
+    }
+
+    public bool isPuddleBall(GameObject ball)
+    {
+        return puddleBall == ball;
     }
 }

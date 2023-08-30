@@ -10,6 +10,8 @@ public class ObjectPool : MonoBehaviour
     public GameObject objectToPool;
     public int amountToPool;
 
+    public Transform baseOfInstances;
+
     void Awake()
     {
         SharedInstance = this;
@@ -21,7 +23,7 @@ public class ObjectPool : MonoBehaviour
         GameObject tmp;
         for(int i = 0; i < amountToPool; i++)
         {
-            tmp = Instantiate(objectToPool);
+            tmp = Instantiate(objectToPool, baseOfInstances);
             tmp.SetActive(false);
             pooledObjects.Add(tmp);
         }

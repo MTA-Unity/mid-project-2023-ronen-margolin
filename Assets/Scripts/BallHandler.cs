@@ -6,6 +6,7 @@ using UnityEngine;
 public class BallHandler : MonoBehaviour
 {
 
+    [SerializeField] private float speedMagnitude;
     private Vector2 speed;
 
     private BallManager manager;
@@ -23,6 +24,10 @@ public class BallHandler : MonoBehaviour
     }
 
     private void Update() {
+        if (!manager.isPuddleBall(this.gameObject))
+        {
+            GetComponent<Rigidbody2D>().velocity = speed*speedMagnitude;
+        }
         manager.checkBallAlive(this.gameObject);
     }
 
@@ -34,20 +39,23 @@ public class BallHandler : MonoBehaviour
             // calculate refelction of speed
             Vector2 reflection = Vector2.Reflect(speed, normal).normalized;
             // add random change in speed angle
-            reflection = new Vector2(reflection.x 
-            + Random.Range(-0.3f, 0.3f), reflection.y 
-            + Random.Range(-0.3f, 0.3f)).normalized;
-            // adjust to same magnitude
-            reflection = reflection * speed.magnitude;
+            reflection = randomizeCollision(reflection,normal);
             // set new speed
-            other.otherRigidbody.velocity = reflection;
-            setSpeed(reflection);
+            other.otherRigidbody.velocity = reflection * speedMagnitude;
+            speed = reflection;
 
             if(other.collider.CompareTag("Puddle"))
             {
                 other.collider.attachedRigidbody.velocity = Vector2.zero;
             }
         }
+    }
+
+    private Vector2 randomizeCollision(Vector2 reflection,Vector2 normal)
+    {
+        Vector2 par = (speed+normal).normalized;
+        par = par*Random.Range(0f,5f);
+        return (reflection + par).normalized;
     }
 
 }

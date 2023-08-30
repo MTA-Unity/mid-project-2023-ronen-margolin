@@ -187,6 +187,7 @@ MonoBehaviour:
   pooledObjects: []
   objectToPool: {fileID: 5684543122650024143, guid: 545c21a994047b1229d87f483e8d078b, type: 3}
   amountToPool: 5
+  baseOfInstances: {fileID: 97760655}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +533,7 @@ MonoBehaviour:
   pooledObjects: []
   objectToPool: {fileID: 6509948895210011165, guid: dddec7cc9d9a38b069e192f2455c2395, type: 3}
   amountToPool: 3
+  baseOfInstances: {fileID: 0}
 --- !u!1 &2009850992
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +598,7 @@ MonoBehaviour:
   pooledObjects: []
   objectToPool: {fileID: 595562397161105264, guid: ab26a69d141c1315b9ee1e510fd9f243, type: 3}
   amountToPool: 100
+  baseOfInstances: {fileID: 2009850993}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
