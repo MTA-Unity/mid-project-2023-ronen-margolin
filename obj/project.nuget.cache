@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s0Jk7VCIwlPiotnLVGSe4GbtSIWUak5KrMK6K5n6PgFEpls/VNxEQ4mIew3LzLNKAbdn/fBYuOSd40KRPebTfQ==",
+  "dgSpecHash": "R5wMwa7waEeYHCbEz6Yzap2cOhBMROY+P1b8IupMmqGPv0JW/vM8/qcrwNoOmQF0MPNngoX+YT7a072ApCbIyg==",
   "success": true,
-  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Timeline.csproj",
+  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.SettingsProvider.Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
