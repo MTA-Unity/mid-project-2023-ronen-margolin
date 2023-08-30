@@ -1,10 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Pool;
-using UnityEngine.SceneManagement;
 
 public class BallManager : MonoBehaviour
 {
@@ -13,11 +8,17 @@ public class BallManager : MonoBehaviour
     [SerializeField] private GameObject puddle;
     [SerializeField] private float forceScale;
     [SerializeField] private Camera cam;
+
+    [SerializeField] private GameObject deathMenu;
     [SerializeField] private int lives = 3;
     private GameObject text;
     private GameObject puddleBall;
+
+    private List<GameObject> active_balls;
     private int alive;
     private float bottomBorder;
+
+    private bool gameActive = true;
 
     private TMPro.TextMeshProUGUI textMesh;
 
@@ -27,6 +28,8 @@ public class BallManager : MonoBehaviour
         Debug.Assert(lives>=1);
         bottomBorder = cam.ScreenToWorldPoint(new Vector3(0,Screen.safeArea.yMin,0)).y;
         textMesh = text.GetComponent<TMPro.TextMeshProUGUI>();
+        deathMenu.SetActive(false);
+        active_balls = new List<GameObject>();
     }
 
     // Start is called before the first frame update
@@ -40,27 +43,33 @@ public class BallManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(alive ==0)
+        if(gameActive)
         {
-            addBall();
-            lives--;
-            textMesh.text = "lives: " + lives;
-            if (lives == 0)
+            if(alive ==0)
             {
-                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+                addBall();
+                lives--;
+                textMesh.text = "lives: " + lives;
+                if (lives == 0)
+                {
+                    deathMenu.SetActive(true);
+                    gameActive = false;
+                    active_balls.ForEach(ball => ball.SetActive(false));
+                    puddle.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                }
             }
-        }
 
-        if (puddleBall != null)
-        {
-            puddleBall.transform.position = new Vector3(
-                puddle.transform.position.x, 
-                puddleBall.transform.position.y,
-                puddleBall.transform.position.z);
-            if(Input.anyKey)
+            if (puddleBall != null)
             {
-                puddleBall.GetComponent<BallHandler>().setSpeed(getRandomDir());
-                puddleBall = null;
+                puddleBall.transform.position = new Vector3(
+                    puddle.transform.position.x, 
+                    puddleBall.transform.position.y,
+                    puddleBall.transform.position.z);
+                if(Input.anyKey)
+                {
+                    puddleBall.GetComponent<BallHandler>().setSpeed(getRandomDir());
+                    puddleBall = null;
+                }
             }
         }
     }
@@ -85,6 +94,7 @@ public class BallManager : MonoBehaviour
     {
         puddleBall = pool.GetPooledObject();
         sendBallToPuddle(puddleBall);
+        active_balls.Add(puddleBall);
         alive++;
     }
 
