@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class BlockBehavior : MonoBehaviour
 {
+    private BlockPoolManager manager;
+
+    public int index{ get; set; }
+
+    private void Awake() {
+        manager = GetComponentInParent<BlockPoolManager>();
+    }
+
     private void OnCollisionEnter2D(Collision2D other) {
-        other.otherCollider.gameObject.SetActive(false);
+        manager.destroyBlock(this);
     }
 }

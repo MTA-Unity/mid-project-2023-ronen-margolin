@@ -2,85 +2,63 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Unity.VisualScripting.Core/1.0.0": {
+      "Unity.2D.Common.Runtime/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Unity.Mathematics": "1.0.0",
           "UnityEditor.UI": "1.0.0",
           "UnityEngine.UI": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Unity.VisualScripting.Core.dll": {}
+          "bin/placeholder/Unity.2D.Common.Runtime.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Unity.VisualScripting.Core.dll": {}
+          "bin/placeholder/Unity.2D.Common.Runtime.dll": {}
         }
       },
-      "Unity.VisualScripting.Core.Editor/1.0.0": {
+      "Unity.2D.Sprite.Editor/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Unity.VisualScripting.Core": "1.0.0",
           "UnityEditor.TestRunner": "1.0.0",
           "UnityEditor.UI": "1.0.0",
           "UnityEngine.TestRunner": "1.0.0",
           "UnityEngine.UI": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Unity.VisualScripting.Core.Editor.dll": {}
+          "bin/placeholder/Unity.2D.Sprite.Editor.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Unity.VisualScripting.Core.Editor.dll": {}
+          "bin/placeholder/Unity.2D.Sprite.Editor.dll": {}
         }
       },
-      "Unity.VisualScripting.Flow/1.0.0": {
+      "Unity.Burst/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Unity.VisualScripting.Core": "1.0.0",
           "UnityEditor.UI": "1.0.0",
           "UnityEngine.UI": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Unity.VisualScripting.Flow.dll": {}
+          "bin/placeholder/Unity.Burst.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Unity.VisualScripting.Flow.dll": {}
+          "bin/placeholder/Unity.Burst.dll": {}
         }
       },
-      "Unity.VisualScripting.Flow.Editor/1.0.0": {
+      "Unity.Mathematics/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Unity.VisualScripting.Core": "1.0.0",
-          "Unity.VisualScripting.Core.Editor": "1.0.0",
-          "Unity.VisualScripting.Flow": "1.0.0",
-          "UnityEditor.TestRunner": "1.0.0",
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.TestRunner": "1.0.0",
-          "UnityEngine.UI": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Unity.VisualScripting.Flow.Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Unity.VisualScripting.Flow.Editor.dll": {}
-        }
-      },
-      "Unity.VisualScripting.State/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Unity.VisualScripting.Core": "1.0.0",
-          "Unity.VisualScripting.Flow": "1.0.0",
           "UnityEditor.UI": "1.0.0",
           "UnityEngine.UI": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Unity.VisualScripting.State.dll": {}
+          "bin/placeholder/Unity.Mathematics.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Unity.VisualScripting.State.dll": {}
+          "bin/placeholder/Unity.Mathematics.dll": {}
         }
       },
       "UnityEditor.TestRunner/1.0.0": {
@@ -134,30 +112,25 @@
     }
   },
   "libraries": {
-    "Unity.VisualScripting.Core/1.0.0": {
+    "Unity.2D.Common.Runtime/1.0.0": {
       "type": "project",
-      "path": "Unity.VisualScripting.Core.csproj",
-      "msbuildProject": "Unity.VisualScripting.Core.csproj"
+      "path": "Unity.2D.Common.Runtime.csproj",
+      "msbuildProject": "Unity.2D.Common.Runtime.csproj"
     },
-    "Unity.VisualScripting.Core.Editor/1.0.0": {
+    "Unity.2D.Sprite.Editor/1.0.0": {
       "type": "project",
-      "path": "Unity.VisualScripting.Core.Editor.csproj",
-      "msbuildProject": "Unity.VisualScripting.Core.Editor.csproj"
+      "path": "Unity.2D.Sprite.Editor.csproj",
+      "msbuildProject": "Unity.2D.Sprite.Editor.csproj"
     },
-    "Unity.VisualScripting.Flow/1.0.0": {
+    "Unity.Burst/1.0.0": {
       "type": "project",
-      "path": "Unity.VisualScripting.Flow.csproj",
-      "msbuildProject": "Unity.VisualScripting.Flow.csproj"
+      "path": "Unity.Burst.csproj",
+      "msbuildProject": "Unity.Burst.csproj"
     },
-    "Unity.VisualScripting.Flow.Editor/1.0.0": {
+    "Unity.Mathematics/1.0.0": {
       "type": "project",
-      "path": "Unity.VisualScripting.Flow.Editor.csproj",
-      "msbuildProject": "Unity.VisualScripting.Flow.Editor.csproj"
-    },
-    "Unity.VisualScripting.State/1.0.0": {
-      "type": "project",
-      "path": "Unity.VisualScripting.State.csproj",
-      "msbuildProject": "Unity.VisualScripting.State.csproj"
+      "path": "Unity.Mathematics.csproj",
+      "msbuildProject": "Unity.Mathematics.csproj"
     },
     "UnityEditor.TestRunner/1.0.0": {
       "type": "project",
@@ -182,11 +155,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Unity.VisualScripting.Core >= 1.0.0",
-      "Unity.VisualScripting.Core.Editor >= 1.0.0",
-      "Unity.VisualScripting.Flow >= 1.0.0",
-      "Unity.VisualScripting.Flow.Editor >= 1.0.0",
-      "Unity.VisualScripting.State >= 1.0.0",
+      "Unity.2D.Common.Runtime >= 1.0.0",
+      "Unity.2D.Sprite.Editor >= 1.0.0",
+      "Unity.Burst >= 1.0.0",
+      "Unity.Mathematics >= 1.0.0",
       "UnityEditor.TestRunner >= 1.0.0",
       "UnityEditor.UI >= 1.0.0",
       "UnityEngine.TestRunner >= 1.0.0",
@@ -199,9 +171,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.SettingsProvider.Editor.csproj",
-      "projectName": "Unity.VisualScripting.SettingsProvider.Editor",
-      "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.SettingsProvider.Editor.csproj",
+      "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Common.Editor.csproj",
+      "projectName": "Unity.2D.Common.Editor",
+      "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Common.Editor.csproj",
       "packagesPath": "/home/ronen/.nuget/packages/",
       "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
       "projectStyle": "PackageReference",
@@ -218,20 +190,17 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Core.Editor.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Core.Editor.csproj"
+            "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Common.Runtime.csproj": {
+              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Common.Runtime.csproj"
             },
-            "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Core.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Core.csproj"
+            "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Sprite.Editor.csproj": {
+              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Sprite.Editor.csproj"
             },
-            "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Flow.Editor.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Flow.Editor.csproj"
+            "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.csproj": {
+              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Burst.csproj"
             },
-            "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Flow.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.Flow.csproj"
-            },
-            "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.State.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.State.csproj"
+            "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj": {
+              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj"
             },
             "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj": {
               "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj"

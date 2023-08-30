@@ -9,7 +9,7 @@ public class BallManager : MonoBehaviour
     [SerializeField] private float forceScale;
     [SerializeField] private Camera cam;
 
-    [SerializeField] private GameObject deathMenu;
+    [SerializeField] private DeathController deathMenu;
     [SerializeField] private int lives = 3;
     private GameObject text;
     private GameObject puddleBall;
@@ -18,7 +18,7 @@ public class BallManager : MonoBehaviour
     private int alive;
     private float bottomBorder;
 
-    private bool gameActive = true;
+    public bool gameActive = true;
 
     private TMPro.TextMeshProUGUI textMesh;
 
@@ -28,7 +28,7 @@ public class BallManager : MonoBehaviour
         Debug.Assert(lives>=1);
         bottomBorder = cam.ScreenToWorldPoint(new Vector3(0,Screen.safeArea.yMin,0)).y;
         textMesh = text.GetComponent<TMPro.TextMeshProUGUI>();
-        deathMenu.SetActive(false);
+        deathMenu.CloseMenu();
         active_balls = new List<GameObject>();
     }
 
@@ -52,10 +52,7 @@ public class BallManager : MonoBehaviour
                 textMesh.text = "lives: " + lives;
                 if (lives == 0)
                 {
-                    deathMenu.SetActive(true);
-                    gameActive = false;
-                    active_balls.ForEach(ball => ball.SetActive(false));
-                    puddle.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                    deathMenu.OpenMenu(true);
                 }
             }
 
@@ -110,5 +107,15 @@ public class BallManager : MonoBehaviour
     public bool isPuddleBall(GameObject ball)
     {
         return puddleBall == ball;
+    }
+
+    public void destroyBalls()
+    {
+        active_balls.ForEach(ball => ball.SetActive(false));
+    }
+
+    public void freezePuddle()
+    {
+        puddle.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
     }
 }

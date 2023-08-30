@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -18,6 +19,10 @@ public class BlockPoolManager : MonoBehaviour
     private float topBorder;
     private float bottomBorder;
     private bool firstDraw;
+
+    [SerializeField] private DeathController deathController;
+
+    private int totalAlive = 0;
 
     List<Vector2> blockPositions;
     List<bool> alive = new List<bool>();
@@ -68,6 +73,21 @@ public class BlockPoolManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(!firstDraw && totalAlive == 0)
+        {
+            deathController.OpenMenu(false);
+        }
+    }
+
+    public void destroyBlock(BlockBehavior block)
+    {
+        block.gameObject.SetActive(false);
+        totalAlive--;
+        alive[block.index] = false;
+    }
+
     void drawBlock(int i)
     {
         if(!alive[i])
@@ -78,6 +98,8 @@ public class BlockPoolManager : MonoBehaviour
             block.transform.localScale = new Vector3(colWidth*0.7f, rowWidth*0.7f, 1);
             block.GetComponent<Renderer>().material.color = Random.ColorHSV();
             alive[i] = true;
+            totalAlive++;
+            block.GetComponent<BlockBehavior>().index = i;
         }
     }
 }

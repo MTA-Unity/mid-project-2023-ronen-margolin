@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R5wMwa7waEeYHCbEz6Yzap2cOhBMROY+P1b8IupMmqGPv0JW/vM8/qcrwNoOmQF0MPNngoX+YT7a072ApCbIyg==",
+  "dgSpecHash": "0A44pyoZsLd0/hjFYBlEadyJ4sa0xzm0wdwEUu7OJGaYS4ZkeR3Xq/d9T0tqjvSKbqoEIeCF+Bt3K8DOk2UgYA==",
   "success": true,
-  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.VisualScripting.SettingsProvider.Editor.csproj",
+  "projectFilePath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.2D.Common.Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

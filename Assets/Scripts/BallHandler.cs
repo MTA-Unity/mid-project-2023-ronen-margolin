@@ -13,6 +13,10 @@ public class BallHandler : MonoBehaviour
 
     private BallManager manager;
 
+    private AudioSource audioSource;
+
+    private SpriteRenderer sr;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,6 +24,8 @@ public class BallHandler : MonoBehaviour
         manager = FindAnyObjectByType<BallManager>();
         speed = Vector2.zero;
         coliding = false;
+        sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void setSpeed(Vector2 speed)
@@ -52,6 +58,7 @@ public class BallHandler : MonoBehaviour
             {
                 other.collider.attachedRigidbody.velocity = Vector2.zero;
             }
+            audioSource.Play();
             if(!coliding)
             {
                 StartCoroutine(makeBallPulse());
@@ -64,16 +71,21 @@ public class BallHandler : MonoBehaviour
     {
         float baseRadius = Mathf.Sqrt(Mathf.Pow(transform.localScale.x,2)+Mathf.Pow(transform.localScale.y,2));
         float targetRadius = baseRadius*1.5f;
-        for(float radius=baseRadius;radius<targetRadius;radius+=0.02f)
+        Color start = sr.color;
+        Color target = Color.yellow;
+        for(float radius=baseRadius;radius<targetRadius;radius+=0.05f)
         {
+            sr.color = Color.Lerp(start,target,(radius-baseRadius)/(targetRadius-baseRadius));
             setRadius(radius);
             yield return radius;
         }
-        for(float radius=targetRadius;radius>baseRadius;radius-=0.02f)
+        for(float radius=targetRadius;radius>baseRadius;radius-=0.05f)
         {
+            sr.color = Color.Lerp(target,start,(baseRadius-radius)/(baseRadius-targetRadius));
             setRadius(radius);
             yield return radius;
         }
+        sr.color = start;
         setRadius(baseRadius);
         coliding = false;
         yield return baseRadius;
