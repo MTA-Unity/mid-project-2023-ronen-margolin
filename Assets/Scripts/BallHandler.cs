@@ -9,6 +9,8 @@ public class BallHandler : MonoBehaviour
     private float speedMagnitude;
     private Vector2 speed;
 
+    private bool coliding;
+
     private BallManager manager;
 
     // Start is called before the first frame update
@@ -17,6 +19,7 @@ public class BallHandler : MonoBehaviour
         speedMagnitude = 3;
         manager = FindAnyObjectByType<BallManager>();
         speed = Vector2.zero;
+        coliding = false;
     }
 
     public void setSpeed(Vector2 speed)
@@ -49,7 +52,38 @@ public class BallHandler : MonoBehaviour
             {
                 other.collider.attachedRigidbody.velocity = Vector2.zero;
             }
+            if(!coliding)
+            {
+                StartCoroutine(makeBallPulse());
+                coliding = true;
+            }
         }
+    }
+
+    IEnumerator makeBallPulse()
+    {
+        float baseRadius = Mathf.Sqrt(Mathf.Pow(transform.localScale.x,2)+Mathf.Pow(transform.localScale.y,2));
+        float targetRadius = baseRadius*1.5f;
+        for(float radius=baseRadius;radius<targetRadius;radius+=0.02f)
+        {
+            setRadius(radius);
+            yield return radius;
+        }
+        for(float radius=targetRadius;radius>baseRadius;radius-=0.02f)
+        {
+            setRadius(radius);
+            yield return radius;
+        }
+        setRadius(baseRadius);
+        coliding = false;
+        yield return baseRadius;
+    }
+
+    private void setRadius(float radius)
+    {
+        float x = Mathf.Sqrt(Mathf.Pow(radius,2)/2);
+        float y = x;
+        transform.localScale = new Vector3(x,y, transform.localScale.z);
     }
 
     private Vector2 randomizeCollision(Vector2 reflection,Vector2 normal)
