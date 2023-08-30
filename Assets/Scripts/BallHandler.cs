@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallHandler : MonoBehaviour
 {
 
-    [SerializeField] private float speedMagnitude;
+    private float speedMagnitude;
     private Vector2 speed;
 
     private BallManager manager;
@@ -14,6 +14,7 @@ public class BallHandler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        speedMagnitude = 3;
         manager = FindAnyObjectByType<BallManager>();
         speed = Vector2.zero;
     }

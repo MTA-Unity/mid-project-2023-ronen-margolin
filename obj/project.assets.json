@@ -76,9 +76,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "UnityEditor.TestRunner >= 1.0.0",
       "UnityEditor.UI >= 1.0.0",
-      "UnityEngine.TestRunner >= 1.0.0",
       "UnityEngine.UI >= 1.0.0"
     ]
   },
@@ -88,9 +86,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Rider.Editor.csproj",
-      "projectName": "Unity.Rider.Editor",
-      "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Rider.Editor.csproj",
+      "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Timeline.csproj",
+      "projectName": "Unity.Timeline",
+      "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Timeline.csproj",
       "packagesPath": "/home/ronen/.nuget/packages/",
       "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
       "projectStyle": "PackageReference",
@@ -107,14 +105,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj"
-            },
             "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj": {
               "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj"
-            },
-            "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj": {
-              "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj"
             },
             "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj": {
               "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj"

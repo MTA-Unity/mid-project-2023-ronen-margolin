@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.SceneManagement;
 
 public class BallManager : MonoBehaviour
 {
@@ -10,18 +13,28 @@ public class BallManager : MonoBehaviour
     [SerializeField] private GameObject puddle;
     [SerializeField] private float forceScale;
     [SerializeField] private Camera cam;
+    [SerializeField] private int lives = 3;
+    private GameObject text;
     private GameObject puddleBall;
     private int alive;
     private float bottomBorder;
 
+    private TMPro.TextMeshProUGUI textMesh;
+
     private void Awake() {
+        // get by tag
+        text = GameObject.FindGameObjectWithTag("lives_text");
+        Debug.Assert(lives>=1);
         bottomBorder = cam.ScreenToWorldPoint(new Vector3(0,Screen.safeArea.yMin,0)).y;
+        textMesh = text.GetComponent<TMPro.TextMeshProUGUI>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         alive = 0;
+        lives++;
+        textMesh.text = "lives: " + lives;
     }
 
     // Update is called once per frame
@@ -30,6 +43,12 @@ public class BallManager : MonoBehaviour
         if(alive ==0)
         {
             addBall();
+            lives--;
+            textMesh.text = "lives: " + lives;
+            if (lives == 0)
+            {
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
         }
 
         if (puddleBall != null)

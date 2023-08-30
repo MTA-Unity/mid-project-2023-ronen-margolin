@@ -1288,6 +1288,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410a2bdd7903517db9ef65f1964783c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playButton: {fileID: 578840491}
+  HowToPlayButton: {fileID: 360157859}
+  ExitButton: {fileID: 1238067114}
 --- !u!1 &1416951077
 GameObject:
   m_ObjectHideFlags: 0
