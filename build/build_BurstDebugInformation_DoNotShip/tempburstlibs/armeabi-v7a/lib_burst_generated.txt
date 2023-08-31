@@ -50,7 +50,6 @@ Library: /home/ronen/Documents/college/VR_development/Breakout/Temp/BurstOutput/
 --assembly-defines=mscorlib;
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/ronen/Documents/college/VR_development/Breakout/Temp/Burst
---debug=Full
 --key-folder=/home/ronen/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=/home/ronen/Documents/college/VR_development/Breakout/Library/Burst
 --output=/home/ronen/Documents/college/VR_development/Breakout/Temp/BurstOutput/tempburstlibs/armeabi-v7a/lib_burst_generated
