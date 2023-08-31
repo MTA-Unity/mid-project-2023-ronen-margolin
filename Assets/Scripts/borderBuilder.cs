@@ -33,9 +33,9 @@ public class borderBuilder : MonoBehaviour
             GameObject right = wallPool.GetPooledObject();
             right.SetActive(true);
 
-            left.transform.position = new Vector3(leftBorder, 0, 0);
-            right.transform.position = new Vector3(rightBorder, 0, 0);
-            top.transform.position = new Vector3(0, topBorder, 0);
+            left.transform.position = new Vector3(leftBorder-left.transform.localScale.x/2, 0, 0);
+            right.transform.position = new Vector3(rightBorder+right.transform.localScale.x/2, 0, 0);
+            top.transform.position = new Vector3(0, topBorder+top.transform.localScale.x/2, 0);
             top.transform.Rotate(0,0,90);
             drawn = true;
         }
