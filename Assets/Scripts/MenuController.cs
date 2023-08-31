@@ -11,6 +11,8 @@ public class ManeController : MonoBehaviour
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private UnityEngine.UI.Slider rowSlider;
     [SerializeField] private UnityEngine.UI.Slider colSlider;
+    [SerializeField] private UnityEngine.UI.Button ReturnButton;
+    [SerializeField] private GameObject HowToPlayMenu;
 
     private int blocksInRow;
     private int blocksInCol;
@@ -25,6 +27,7 @@ public class ManeController : MonoBehaviour
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
         HowToPlayButton.onClick.AddListener(OnHowToPlayButtonClicked);
         ExitButton.onClick.AddListener(OnExitButtonClicked);
+        ReturnButton.onClick.AddListener(OnReturnButtonClicked);
         calcBlockLimits();
         settingsMenu.SetActive(false);
         colSlider.minValue = blocksInColBottomLimit;
@@ -33,6 +36,7 @@ public class ManeController : MonoBehaviour
         rowSlider.minValue = blocksInRowBottomLimit;
         rowSlider.maxValue = blocksInRowTopLimit;
         rowSlider.value = blocksInCol;
+        HowToPlayMenu.SetActive(false);
     }
 
     private void OnPlayButtonClicked() {
@@ -43,7 +47,7 @@ public class ManeController : MonoBehaviour
     }
 
     private void OnHowToPlayButtonClicked() {
-        
+        HowToPlayMenu.SetActive(true);
     }
 
     private void OnExitButtonClicked() {
@@ -59,6 +63,12 @@ public class ManeController : MonoBehaviour
         settingsButton.onClick.RemoveListener(OnSettingsButtonClicked);
         HowToPlayButton.onClick.RemoveListener(OnHowToPlayButtonClicked);
         ExitButton.onClick.RemoveListener(OnExitButtonClicked);
+        ReturnButton.onClick.RemoveListener(OnReturnButtonClicked);
+    }
+
+    private void OnReturnButtonClicked()
+    {
+        HowToPlayMenu.SetActive(false);
     }
 
     private void calcBlockLimits()
