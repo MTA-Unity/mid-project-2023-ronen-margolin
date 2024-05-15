@@ -1,0 +1,333 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj": {}
+  },
+  "projects": {
+    "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj",
+        "projectName": "Unity.Mathematics.Editor",
+        "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.Editor.csproj",
+        "packagesPath": "/home/ronen/.nuget/packages/",
+        "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ronen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj",
+        "projectName": "Unity.Mathematics",
+        "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/Unity.Mathematics.csproj",
+        "packagesPath": "/home/ronen/.nuget/packages/",
+        "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ronen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj",
+        "projectName": "UnityEditor.TestRunner",
+        "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj",
+        "packagesPath": "/home/ronen/.nuget/packages/",
+        "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ronen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj",
+        "projectName": "UnityEditor.UI",
+        "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.UI.csproj",
+        "packagesPath": "/home/ronen/.nuget/packages/",
+        "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ronen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEditor.TestRunner.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj"
+              },
+              "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj": {
+                "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj",
+        "projectName": "UnityEngine.TestRunner",
+        "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.TestRunner.csproj",
+        "packagesPath": "/home/ronen/.nuget/packages/",
+        "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ronen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj",
+        "projectName": "UnityEngine.UI",
+        "projectPath": "/home/ronen/Documents/college/VR_development/Breakout/UnityEngine.UI.csproj",
+        "packagesPath": "/home/ronen/.nuget/packages/",
+        "outputPath": "/home/ronen/Documents/college/VR_development/Breakout/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ronen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
